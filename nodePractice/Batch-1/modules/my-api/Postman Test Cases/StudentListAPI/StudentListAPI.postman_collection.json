@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "9550764c-3302-4ab6-92c1-92f9681a1f43",
+		"name": "StudentListAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23316103"
+	},
+	"item": [
+		{
+			"name": "insertStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1987933,\r\n    \"name\": \"Bulbul\",\r\n    \"roll\": 47,\r\n    \"home\": \"Rajshahi\",\r\n    \"mobile\": \"01727165564\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/insertStudent",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"insertStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/readStudent",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"readStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1987999,\r\n    \"roll\": 48,\r\n    \"home\": \"Rajshahi\",\r\n    \"mobile\": \"01727165564\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/updateStudent/1802139",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"updateStudent",
+						"1802139"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/deleteStudent/1987999",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"deleteStudent",
+						"1987999"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base_URL",
+			"value": "http://localhost:5000/api/v1",
+			"type": "string"
+		}
+	]
+}

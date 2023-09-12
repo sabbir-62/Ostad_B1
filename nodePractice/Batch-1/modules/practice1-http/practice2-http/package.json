@@ -1,0 +1,13 @@
+{
+  "name": "nodePractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "coreModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node coreModule.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

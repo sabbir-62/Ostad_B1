@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "a3031481-919d-4cad-ae30-0311268a3b9a",
+		"name": "ToDo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23316103"
+	},
+	"item": [
+		{
+			"name": "Login Registration",
+			"item": [
+				{
+					"name": "createProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Moshiur\",\r\n    \"LastName\": \"Islam\",\r\n    \"Email\" : \"Moshiur@gmail.com\",\r\n    \"Mobile\": \"01729892772\",\r\n    \"city\": \"Komolpur\",\r\n    \"UserName\": \"Mosh60\",\r\n    \"Password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createProfile",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"Mosh60\",\r\n    \"Password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/login",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"Sabbir62\",\r\n    \"Password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/changePassword",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "selectUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token-key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjkxNDYxMjEsImRhdGEiOnsiX2lkIjoiNjM3YmQ0NjY0OTRlY2MzOGJkZmJjNDI4IiwiRmlyc3ROYW1lIjoiTW9zaGl1ciIsIkxhc3ROYW1lIjoiSXNsYW0iLCJFbWFpbCI6Ik1vc2hpdXJAZ21haWwuY29tIiwiTW9iaWxlIjoiMDE3Mjk4OTI3NzIiLCJjaXR5IjoiS29tb2xwdXIiLCJVc2VyTmFtZSI6Ik1vc2g2MCIsIlBhc3N3b3JkIjoiMTIzNDU2In0sImlhdCI6MTY2OTA1OTcyMX0.4NTTsUFZLx7dNRf2updZ0ZWhbA4VSr-LRa1uqG6sRAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/selectUser",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"selectUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Moshiur\",\r\n    \"LastName\": \"Rahman\",\r\n    \"Email\" : \"Moshiur@gmail.com\",\r\n    \"Mobile\": \"01729892772\",\r\n    \"city\": \"Komolpur\",\r\n    \"UserName\": \"Mosh60\",\r\n    \"Password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateUser",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ToDo List",
+			"item": [
+				{
+					"name": "createToDo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ToDoSubject\": \"Filtering\",\r\n    \"ToDoDescription\": \"Data\",\r\n    \"ToDoStatus\" : \"New\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createToDo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createToDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectToDo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BaseURL}}/selectToDo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"selectToDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateToDo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ToDoSubject\": \"Converter\",\r\n    \"ToDoDescription\": \"AC to DC\",\r\n    \"_id\": \"637efd6e4f8fda616c6fa43e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateToDo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateToDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatusToDo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"ToDoStatus\": \"Complete\",\r\n    \"_id\": \"6381b36f3aae14925df20214\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateStatusToDo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateStatusToDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeToDo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"6381b36f3aae14925df20214\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/removeToDo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"removeToDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectToDoByStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ToDoStatus\": \"Complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/selectToDoByStatus",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"selectToDoByStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectToDoByDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\": \"2022-11-24\",\r\n    \"ToDate\": \"2022-11-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/selectToDoByDate",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"selectToDoByDate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:5000/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk1NDkzNDcsImRhdGEiOnsiX2lkIjoiNjM3YmQ0NjY0OTRlY2MzOGJkZmJjNDI4IiwiRmlyc3ROYW1lIjoiTW9zaGl1ciIsIkxhc3ROYW1lIjoiUmFobWFuIiwiRW1haWwiOiJNb3NoaXVyQGdtYWlsLmNvbSIsIk1vYmlsZSI6IjAxNzI5ODkyNzcyIiwiY2l0eSI6IktvbW9scHVyIiwiVXNlck5hbWUiOiJNb3NoNjAiLCJQYXNzd29yZCI6IjEyMzQ1NiJ9LCJpYXQiOjE2Njk0NjI5NDd9.Qmqm8LMKX_GAxqPWNpnLtBgv0LzgFtsHa_1pXjOGFbM",
+			"type": "string"
+		}
+	]
+}

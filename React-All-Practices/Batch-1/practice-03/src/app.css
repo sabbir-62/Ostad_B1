@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.App{
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.icon{
+    font-size: 60px;
+    color: rgb(29, 29, 156);
+    margin: 10px;
+    border: 1px solid red;
+}
